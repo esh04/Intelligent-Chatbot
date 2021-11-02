@@ -19,7 +19,7 @@ import warnings
     covid result
 '''
 
-def covid_pred(test)
+def covid_pred(test):
 
     df=pd.read_csv('out.csv')
 

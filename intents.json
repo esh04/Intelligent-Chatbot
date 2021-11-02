@@ -33,7 +33,12 @@
                 "patterns": ["Can u give me COVID statistics? ", "What are the current Covid statistics?" ],
                 "responses": ["Hey!"],
                 "context": [""]
-               },
+        },
+        {"tag": "news",
+                "patterns": ["Can u give me current COVID news? ", "I want some COVID related news" ],
+                "responses": ["Hey!"],
+                "context": [""]
+        },
         {"tag": "adverse_drug",
          "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
          "responses": ["Navigating to Adverse drug reaction module"],

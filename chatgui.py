@@ -13,6 +13,8 @@ words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
 from statistics import covidStatistic
+from state_finder import state_finder
+from news import news
 
 def clean_up_sentence(sentence):
     # tokenize the pattern - split words into array
@@ -50,12 +52,17 @@ def predict_class(sentence, model):
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
-def getResponse(ints, intents_json):
+def getResponse(ints, intents_json, msg):
     tag = ints[0]['intent'] 
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
-        if(i['tag']== 'statistics'):
-            result = covidStatistic('Karnataka')
+        if(tag== 'statistics'): #can u give me covid statistics for
+            result = covidStatistic(state_finder(msg))
+            # result = covidStatistic("Karnataka")
+            break
+        elif(tag== 'news'): #can u give me covid statistics for
+            result = news(state_finder(msg))
+            # result = covidStatistic("Karnataka")
             break
         elif(i['tag']== tag): # if(tag='hospital') #call hospital function
             result = random.choice(i['responses'])
@@ -66,7 +73,7 @@ def getResponse(ints, intents_json):
 
 def chatbot_response(msg):
     ints = predict_class(msg, model)
-    res = getResponse(ints, intents)
+    res = getResponse(ints, intents, msg)
     return res
 
 
