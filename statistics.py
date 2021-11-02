@@ -15,9 +15,8 @@ def covidStatistic(state):
     
     table = soup.find(id=state) 
     if table is None:
-        print("No such state exists in India. Please recheck your spelling.")
-        return
-
+        return ("No such state exists in India. Please recheck your spelling.")
+        
     rows = table.findAll('td')
     total = rows[1].text.strip().split('  ')
     deaths = rows[2].text.strip().split('  ')
