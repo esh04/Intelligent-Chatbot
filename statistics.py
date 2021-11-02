@@ -22,5 +22,6 @@ def covidStatistic(state):
     total = rows[1].text.strip().split('  ')
     deaths = rows[2].text.strip().split('  ')
     recovered = rows[3].text.strip().split('  ')
-    print('Covid Statistics of ',state,'\nTotal Cases: ',total[0],'; Total New Cases: ', total[1],'\nTotal Deaths: ',deaths[0],'; Total New Deaths: ', deaths[1],'\nTotal Recovered: ',recovered[0],'; Total New Recovered: ', recovered[1] )
+    stats = 'Covid Statistics of '+state+'\nTotal Cases: '+total[0]+'; Total New Cases: '+total[1]+'\nTotal Deaths: '+deaths[0]+'; Total New Deaths: '+deaths[1]+'\nTotal Recovered: '+recovered[0]+'; Total New Recovered: '+recovered[1]
+    return stats
 
