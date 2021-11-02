@@ -19,24 +19,26 @@ import warnings
     covid result
 '''
 
+def covid_pred(test)
 
-df=pd.read_csv('out.csv')
+    df=pd.read_csv('out.csv')
 
-warnings.filterwarnings("ignore")
+    warnings.filterwarnings("ignore")
 
 
-df_x=df.drop(df.columns[7],axis=1)
-y=df.drop(df.columns[0:7],axis=1)
-y=y.values.tolist()
+    df_x=df.drop(df.columns[7],axis=1)
+    y=df.drop(df.columns[0:7],axis=1)
+    y=y.values.tolist()
 
-scaler=StandardScaler()
+    scaler=StandardScaler()
 
-df_x=scaler.fit_transform(df_x)
-df_x=pd.DataFrame(df_x)
+    df_x=scaler.fit_transform(df_x)
+    df_x=pd.DataFrame(df_x)
 
-gnb=GaussianNB()
-test=eval(input()) # input of the form (l,m,n,o,p,q,r)
-test=np.asarray(test).reshape(1,7)
-y_pred=gnb.fit(df_x,y).predict_proba(test)
+    gnb=GaussianNB()
+    test=eval(input()) # input of the form (l,m,n,o,p,q,r)
+    test=np.asarray(test).reshape(1,7)
+    y_pred=gnb.fit(df_x,y).predict_proba(test)
 
-print("Probability of Covid is %.2f percent" %(y_pred[0][0]*100))
+    #print("Probability of Covid is %.2f percent" %(y_pred[0][0]*100))
+    return y_pred[0][0]*100
