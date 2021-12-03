@@ -15,6 +15,7 @@ classes = pickle.load(open('classes.pkl','rb'))
 from statistics import covidStatistic
 from state_finder import state_finder
 from news import news
+from predictor import covid_pred
 
 def clean_up_sentence(sentence):
     # tokenize the pattern - split words into array
@@ -90,9 +91,12 @@ def send():
         ChatLog.config(state=NORMAL)
         ChatLog.insert(END, "You: " + msg + '\n\n')
         ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
-    
-        res = chatbot_response(msg)
-        ChatLog.insert(END, "Bot: " + res + '\n\n')
+
+        if msg[0]=='0' or msg[0]=='1':
+            ChatLog.insert(END, "Bot: " + str(covid_pred(tuple(eval(msg)))) + '\n\n')
+        else:
+            res = chatbot_response(msg)
+            ChatLog.insert(END, "Bot: " + res + '\n\n')
             
         ChatLog.config(state=DISABLED)
         ChatLog.yview(END)

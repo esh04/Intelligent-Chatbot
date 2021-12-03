@@ -30,12 +30,12 @@
                 "context": [""]
         },
         {"tag": "statistics",
-                "patterns": ["Can u give me COVID statistics? ", "What are the current Covid statistics?" ],
+                "patterns": ["Can u give me COVID statistics? ", "What are the current Covid statistics?","I need the current covid statistics"],
                 "responses": ["Hey!"],
                 "context": [""]
         },
         {"tag": "news",
-                "patterns": ["Can u give me current COVID news? ", "I want some COVID related news" ],
+                "patterns": ["Can u give me current COVID news? ", "I want some COVID related news", "I need some covid related news"],
                 "responses": ["Hey!"],
                 "context": [""]
         },
