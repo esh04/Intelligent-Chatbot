@@ -12,6 +12,7 @@ to run the file locally: `python3 chatgui.py`
 
 ## Functionalities
 ### Probability of being infected
+An existing dataset was used to collect data regarding 7 features and the state of the patient(i.e. if she/he has COVID or not). Using the data, a Naive Bayes Classifier was trained in order to predict new cases of COVID. The user is asked to input the details in a specific format after which the classifier predicts probability of the user having COVID.
 
 `sklearn`
 ### Live covid statistics
