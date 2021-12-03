@@ -30,7 +30,7 @@
                 "context": [""]
         },
         {"tag": "statistics",
-                "patterns": ["Can u give me COVID statistics? ", "What are the current Covid statistics?","I need the current covid statistics"],
+                "patterns": ["Can u give me COVID statistics? ", "What are the current Covid statistics?","I need the current covid statistics","Give me Covid stats"],
                 "responses": ["Hey!"],
                 "context": [""]
         },
@@ -70,7 +70,7 @@
          "context": [""]
         },
         {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "patterns": ["Can u give hospitals near me?", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
          "responses": ["Please provide hospital name or location"],
          "context": ["search_hospital_by_params"]
         },
@@ -83,6 +83,10 @@
          "patterns": [],
          "responses": ["Loading hospital details"],
          "context": [""]
+        },
+        {"tag":"covid_predictor",
+         "patterns": ["predict if i have covid","can you run the covid predictor","i want to know if i have covid","What are my chances of having covid?","tell me if i could have covid","i am feeling sick","i dont feel so good","i am not feeling well"],
+         "responses": ["Please answer the following questions to perform the Covid prediction\nAre you suffering from the following symptoms[1:yes; 0:no]?\n1. Cough\n2. Fever\n3. Sore Throat\n4. Shortness of Breath\n5. HeadAche\nWhat is your gender?\n\tMale: 0\n\tFemale: 2\n\tOther: 1\nAre you above 60 years of age?\nPlease input your answers in the format \nq1,q2,q3,q4,q5,q6,q7\nExample:\nYou: 0,0,1,1,0,2,1\n\n"]
         }
    ]
 }

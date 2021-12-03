@@ -70,8 +70,6 @@ def getResponse(ints, intents_json, msg):
             break
     return result
 
-
-
 def chatbot_response(msg):
     ints = predict_class(msg, model)
     res = getResponse(ints, intents, msg)
