@@ -93,7 +93,12 @@ def send():
         ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
 
         if msg[0]=='0' or msg[0]=='1':
-            ChatLog.insert(END, "Bot: " + str(covid_pred(tuple(eval(msg)))) + '\n\n')
+            check = covid_pred(tuple(eval(msg)))
+            ChatLog.insert(END, "Bot: " + str(check)[0:5]+ "% chance you have COVID" + '\n\n')
+            if check > 50:
+                ChatLog.insert(END, "Bot: Please go and visit a doctor"+ '\n\n')
+            else: 
+                ChatLog.insert(END, "Bot: You are safe, please take care"+ '\n\n')
         else:
             res = chatbot_response(msg)
             ChatLog.insert(END, "Bot: " + res + '\n\n')
