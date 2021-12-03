@@ -5,17 +5,17 @@ import pickle
 import numpy as np
 
 from keras.models import load_model
-model = load_model('chatbot_model.h5')
+model = load_model('./Data/chatbot_model.h5')
 import json
 import random
-intents = json.loads(open('intents.json').read())
-words = pickle.load(open('words.pkl','rb'))
-classes = pickle.load(open('classes.pkl','rb'))
+intents = json.loads(open('./Data/intents.json').read())
+words = pickle.load(open('./Data/words.pkl','rb'))
+classes = pickle.load(open('./Data/classes.pkl','rb'))
 
-from statistics import covidStatistic
-from state_finder import state_finder
-from news import news
-from predictor import covid_pred
+from Pyscripts.statistics import covidStatistic
+from Pyscripts.state_finder import state_finder
+from Pyscripts.news import news
+from Pyscripts.predictor import covid_pred
 
 def clean_up_sentence(sentence):
     # tokenize the pattern - split words into array
