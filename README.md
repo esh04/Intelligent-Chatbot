@@ -3,6 +3,8 @@ to run the file locally: `python3 chatgui.py`
 
 `chatgui.py` contains the GUI of the chatbot using which the user can interact with the bot. 
 
+The primary focus of the bot is to guide people in the ongoing pandemic, answer questions regarding vaccinations, symptoms, live covid statistics, hospitals nearby, probability of being infected to name a few. 
+
 ### Training of the Chatbot
 - run `python3 train_chatbot.py` in the terminal to train the chatbot. 
     - `words.pkl`, `classes.pkl` and `Chatbot_model.h5` will be generated.
