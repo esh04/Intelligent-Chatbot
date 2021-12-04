@@ -1,14 +1,17 @@
 # Intelligent-Chatbot
-to run the file locally: `python3 chatgui.py` 
 
-`chatgui.py` contains the GUI of the chatbot using which the user can interact with the bot. `Tkinter` has been used to make this. 
+A chatbot is an intelligent piece of software that is capable of communicating and performing actions similar to a human. Chatbots are used a lot in customer interaction, marketing on social network sites and instantly messaging the client. 
+Our chatbot is a **COVID CHATBOT**. The primary focus of the bot is to guide people in the ongoing pandemic, answer questions regarding vaccinations, symptoms, live covid statistics, probability of being infected to name a few. 
 
-The primary focus of the bot is to guide people in the ongoing pandemic, answer questions regarding vaccinations, symptoms, live covid statistics, probability of being infected to name a few. 
+To run the chatbot locally: `python3 chatgui.py` 
+
+`chatgui.py` contains the GUI of the chatbot using which the user can interact with the bot. `Tkinter` has been used to make this.
+
 
 ### Training of the Chatbot
-- run `python3 train_chatbot.py` in the terminal to train the chatbot. 
-    - `words.pkl`, `classes.pkl` and `Chatbot_model.h5` will be generated.
-    - `words.pkl` stores the the words Python object that contains a list of our vocabulary, `classes.pkl` contains the categories and `Chatbot_model.h5` contains the trained model that contains information about the model and has weights of the neurons.
+- Run `python3 train_chatbot.py` in the terminal to train the chatbot. 
+    - `words.pkl`, `classes.pkl` and `chatbot_model.h5` will be generated.
+    - `words.pkl` stores the the words Python object that contains a list of our vocabulary, `classes.pkl` contains the categories and `chatbot_model.h5` contains the trained model that contains information about the model and has weights of the neurons.
 - We have trained our chatbot using the `keras` module and`nltk` wordnets to the intents.json present in the Data folder.  
 - A special recurrent neural network (LSTM) is used to classify which category the user’s message belongs to and then we will give a random response from the list of responses.
 

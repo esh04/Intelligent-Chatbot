@@ -21,7 +21,7 @@ import warnings
 
 def covid_pred(test):
 
-    df=pd.read_csv('out.csv')
+    df=pd.read_csv('./Data/out.csv')
 
     warnings.filterwarnings("ignore")
 
