@@ -27,3 +27,5 @@ News regarding covid for the mentioned state are being scraped live from Bing ne
 
 ### Information regarding vaccinations 
 The bot tries to answer questions regarding vaccinations and directs further questions to the cowin website of the Government of India. 
+
+-----
