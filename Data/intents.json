@@ -39,9 +39,9 @@
                 "responses": ["Hey!"],
                 "context": [""]
         },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
+        {"tag": "cowin",
+         "patterns": ["I need to get a vaccination done", "How do I schedule a vaccination", "Which vaccine do I need to get?", "Vaccines in India", "Vaccinations in India", "Help me plan my vaccinations please"],
+         "responses": ["For further details and follow-ups regarding the same, please visit the link: https://www.cowin.gov.in/"],
          "context": [""]
         },
         {"tag": "blood_pressure",
